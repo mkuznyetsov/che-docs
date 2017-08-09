@@ -102,7 +102,7 @@ You can place limits on how users interact with the system to control overall sy
 
 You can also set limits on Docker's allocation of CPU to workspaces, which may be necessary if you have a very dense workspace population where users are competing for limited physical resources.
 
-Workspace idle timeout can be configured in `che.env` , so that inactive workspaces will be shutdown automatically over this length of time in milliseconds. By default, this value is set to 3600000 (1 hour). If set to "0", then workspaces will not be stopped automatically. Currently, keyboard and mouse interactions in IDE, as well as HTTP requests to ws-agent count as activity
+The workspace idle timeout can be configured in che.env. Workspaces that are inactive for this time will be shutdown automatically. By default, this value is set to 3600000 (1 hour). If set to "0", then workspaces will not be stopped automatically. Currently, keyboard and mouse interactions in IDE, as well as HTTP requests to ws-agent count as activity
 
 # Hostname
 The IP address or DNS name of where the Che endpoint will service your users. If you are running this on a local system, we auto-detect this value as the IP address of your Docker daemon. On many systems, especially those from cloud hosters like DigitalOcean, you may have to explicitly set this to the external IP address or DNS entry provided by the provider. You can edit this value in `che.env` and restart Che, or you can pass it during initialization:
